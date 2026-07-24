@@ -20,8 +20,8 @@ jobs:
       - name: Run env vars script
         run: bash scripts/env-vars.sh
 
-      - name: Run hostname script
-        run: bash /bin/hostname
+      - name: Run hostname 
+        run: /bin/hostname
 
 #      - name: Run optional failure script
 #        run: bash scripts/exit-status.sh fail
