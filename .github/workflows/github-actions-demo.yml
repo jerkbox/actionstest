@@ -12,7 +12,7 @@ jobs:
       MY_TEST_VAR: "demo-value"
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.4.0
 
       - name: Run hello script
         run: bash scripts/hello.sh
