@@ -1,0 +1,33 @@
+name: Bash Action Playground
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  explore:
+    runs-on: ubuntu-latest
+    env:
+      MY_TEST_VAR: "demo-value"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run hello script
+        run: bash scripts/hello.sh
+
+      - name: Run env vars script
+        run: bash scripts/env-vars.sh
+
+      - name: Run optional failure script
+        run: bash scripts/exit-status.sh fail
+        continue-on-error: true
+
+      - name: Run success script
+        run: bash scripts/exit-status.sh
+
+      - name: List repository files
+        run: |
+          echo "Workspace: $GITHUB_WORKSPACE"
+          ls -la
