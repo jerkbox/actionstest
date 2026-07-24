@@ -24,5 +24,7 @@ Run the scripts locally with bash:
 bash scripts/hello.sh
 bash scripts/env-vars.sh
 bash scripts/exit-status.sh
-bash scripts/exit-status.sh fail
+#Uncomment the below to have a failure you can test the 'continue on failure' or 'exit in failure' behaviour. 
+#bash scripts/exit-status.sh fail
+hostname
 ```
