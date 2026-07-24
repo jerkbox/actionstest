@@ -13,3 +13,4 @@ echo "ACTOR=$GITHUB_ACTOR"
 
 echo ""
 echo "Custom variable MY_TEST_VAR=${MY_TEST_VAR:-<unset>}"
+
